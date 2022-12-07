@@ -1,0 +1,22 @@
+ould not find log4j2 configuration at path /usr/share/logstash/config/log4j2.properties. Using default config which logs errors to the console
+[INFO ] 2022-12-06 14:28:16.018 [main] writabledirectory - Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[INFO ] 2022-12-06 14:28:16.034 [main] writabledirectory - Creating directory {:setting=>"path.dead_letter_queue", :path=>"/usr/share/logstash/data/dead_letter_queue"}
+[WARN ] 2022-12-06 14:28:16.427 [LogStash::Runner] multilocal - Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[INFO ] 2022-12-06 14:28:16.447 [LogStash::Runner] agent - No persistent UUID file found. Generating new UUID {:uuid=>"d51637a0-3b21-44e6-8faa-67e718c84338", :path=>"/usr/share/logstash/data/uuid"}
+[INFO ] 2022-12-06 14:28:16.709 [LogStash::Runner] runner - Starting Logstash {"logstash.version"=>"6.3.0"}
+[INFO ] 2022-12-06 14:28:18.048 [Converge PipelineAction::Create<main>] pipeline - Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50}
+[INFO ] 2022-12-06 14:28:18.529 [[main]-pipeline-manager] elasticsearch - Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch.elk:9200/]}}
+[INFO ] 2022-12-06 14:28:18.541 [[main]-pipeline-manager] elasticsearch - Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch.elk:9200/, :path=>"/"}
+[WARN ] 2022-12-06 14:28:19.068 [[main]-pipeline-manager] elasticsearch - Restored connection to ES instance {:url=>"http://elasticsearch.elk:9200/"}
+[INFO ] 2022-12-06 14:28:19.443 [[main]-pipeline-manager] elasticsearch - ES Output version determined {:es_version=>6}
+[WARN ] 2022-12-06 14:28:19.444 [[main]-pipeline-manager] elasticsearch - Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[INFO ] 2022-12-06 14:28:19.445 [[main]-pipeline-manager] elasticsearch - Using mapping template from {:path=>nil}
+[INFO ] 2022-12-06 14:28:19.450 [[main]-pipeline-manager] elasticsearch - Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[INFO ] 2022-12-06 14:28:19.531 [[main]-pipeline-manager] elasticsearch - Installing elasticsearch template to _template/logstash
+[INFO ] 2022-12-06 14:28:19.733 [[main]-pipeline-manager] elasticsearch - New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//elasticsearch.elk:9200"]}
+[INFO ] 2022-12-06 14:28:19.873 [[main]-pipeline-manager] geoip - Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/2.3.0/gems/logstash-filter-geoip-5.0.3-java/vendor/GeoLite2-City.mmdb"}
+[INFO ] 2022-12-06 14:28:20.482 [[main]-pipeline-manager] beats - Beats inputs: Starting input listener {:address=>"0.0.0.0:5044"}
+[INFO ] 2022-12-06 14:28:20.570 [Converge PipelineAction::Create<main>] pipeline - Pipeline started successfully {:pipeline_id=>"main", :thread=>"#<Thread:0x34808de1@/usr/share/logstash/logstash-core/lib/logstash/pipeline.rb:245 run>"}
+[INFO ] 2022-12-06 14:28:20.592 [Ruby-0-Thread-1: /usr/share/logstash/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:22] agent - Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[INFO ] 2022-12-06 14:28:20.592 [[main]<beats] Server - Starting server on port: 5044
+[INFO ] 2022-12-06 14:28:20.754 [Api Webserver] agent - Successfully started Logstash API endpoint {:port=>9600}
