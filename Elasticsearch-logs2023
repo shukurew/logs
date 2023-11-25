@@ -1,0 +1,22 @@
+, shards [1]/[0], mappings [doc]
+[2023-11-25T14:23:08,758][INFO ][o.e.c.r.a.AllocationService] [25-rdJa] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.monitoring-es-6-2023.11.25][0]] ...]).
+[2023-11-25T14:44:55,289][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [.management-beats] for index patterns [.management-beats]
+[2023-11-25T14:44:58,774][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [.kibana_task_manager] for index patterns [.kibana_task_manager]
+[2023-11-25T14:44:58,799][INFO ][o.e.c.m.MetaDataCreateIndexService] [25-rdJa] [.kibana_task_manager] creating index, cause [auto(bulk api)], templates [.kibana_task_manager], shards [1]/[1], mappings [_doc]
+[2023-11-25T14:44:58,800][INFO ][o.e.c.r.a.AllocationService] [25-rdJa] updating number_of_replicas to [0] for indices [.kibana_task_manager]
+[2023-11-25T14:44:58,841][INFO ][o.e.c.r.a.AllocationService] [25-rdJa] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.kibana_task_manager][0]] ...]).
+[2023-11-25T14:44:58,926][WARN ][o.e.d.r.a.a.i.RestPutMappingAction] [25-rdJa] [types removal] Specifying types in put mapping requests is deprecated. To be compatible with 7.0, the mapping definition should not be nested under the type name, and the parameter include_type_name must be provided and set to false.
+[2023-11-25T14:44:58,948][INFO ][o.e.c.m.MetaDataMappingService] [25-rdJa] [.kibana_2/wxUY9uHrQuOu0DPMg8xfVw] update_mapping [doc]
+[2023-11-25T14:44:58,980][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T14:44:59,002][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T14:44:59,012][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:02:48,056][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:03:30,126][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:03:30,669][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:03:32,249][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:04:08,462][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:04:09,210][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:04:56,025][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:04:57,141][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:05:22,504][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
+[2023-11-25T15:06:17,400][INFO ][o.e.c.m.MetaDataIndexTemplateService] [25-rdJa] adding template [kibana_index_template:.kibana] for index patterns [.kibana]
