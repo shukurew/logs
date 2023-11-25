@@ -1,0 +1,16 @@
+/]}}
+[INFO ] 2023-11-25 14:53:06.275 [[main]-pipeline-manager] elasticsearch - Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch-logging:9200/, :path=>"/"}
+[WARN ] 2023-11-25 14:53:06.370 [[main]-pipeline-manager] elasticsearch - Restored connection to ES instance {:url=>"http://elasticsearch-logging:9200/"}
+[INFO ] 2023-11-25 14:53:06.690 [[main]-pipeline-manager] elasticsearch - ES Output version determined {:es_version=>6}
+[WARN ] 2023-11-25 14:53:06.691 [[main]-pipeline-manager] elasticsearch - Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>6}
+[INFO ] 2023-11-25 14:53:06.692 [[main]-pipeline-manager] elasticsearch - Using mapping template from {:path=>nil}
+[INFO ] 2023-11-25 14:53:06.695 [[main]-pipeline-manager] elasticsearch - Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>60001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword", "ignore_above"=>256}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date"}, "@version"=>{"type"=>"keyword"}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[INFO ] 2023-11-25 14:53:06.705 [[main]-pipeline-manager] elasticsearch - Installing elasticsearch template to _template/logstash
+[INFO ] 2023-11-25 14:53:06.760 [[main]-pipeline-manager] elasticsearch - New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//elasticsearch-logging:9200"]}
+[INFO ] 2023-11-25 14:53:06.824 [[main]-pipeline-manager] geoip - Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/2.3.0/gems/logstash-filter-geoip-5.0.3-java/vendor/GeoLite2-City.mmdb"}
+[INFO ] 2023-11-25 14:53:07.317 [[main]-pipeline-manager] beats - Beats inputs: Starting input listener {:address=>"0.0.0.0:5044"}
+[INFO ] 2023-11-25 14:53:07.380 [Converge PipelineAction::Create<main>] pipeline - Pipeline started successfully {:pipeline_id=>"main", :thread=>"#<Thread:0x2e66088@/usr/share/logstash/logstash-core/lib/logstash/pipeline.rb:245 sleep>"}
+[INFO ] 2023-11-25 14:53:07.395 [[main]<beats] Server - Starting server on port: 5044
+[INFO ] 2023-11-25 14:53:07.418 [Ruby-0-Thread-1: /usr/share/logstash/vendor/bundle/jruby/2.3.0/gems/stud-0.0.23/lib/stud/task.rb:22] agent - Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[INFO ] 2023-11-25 14:53:07.510 [Api Webserver] agent - Successfully started Logstash API endpoint {:port=>9600}
+
